@@ -1,0 +1,54 @@
+import java.io.*;
+import java.util.*;
+class UserMainCode
+{
+public int nonRepeatedDigitsCount(int input1)
+{
+int i=0,j,k;
+int n=input1;
+int count=0,check,c2=0;
+
+// FINDING NUMBER OF DIGITS ON THE GIVEN NUMBER
+while(n>0){
+
+    n=n/10;
+    c2++;
+    }
+//CREATING ARRAY OF THE 'c2' SIZE       
+int arr[]=new int[c2];
+n=input1;
+//STORING INDIVIDUAL DIGITS IN THE ARRAY
+while(n>0)
+{
+    arr[i]=n%10;
+    n=n/10;
+    i++;
+
+}
+// CONDITION TO FIND NON REPEATING DIGITS
+for(j=0;j<c2;j++)
+{
+    check=0;
+
+    for(k=0;k<c2;k++)
+    {
+          if(j!=k)
+          {
+           if(arr[j]==arr[k])
+           {
+            check++;
+           }
+          } 
+
+    }
+
+    if(check==0)
+     {
+        count++;
+     }
+ }
+
+return count;
+}
+}
+

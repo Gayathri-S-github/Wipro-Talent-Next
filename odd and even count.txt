@@ -1,0 +1,31 @@
+public int countEvensOdds(int input1,int input2,int input3,int input4,int input5,String input6)
+{	
+int odd_count=0;
+    int even_count=0;
+    if((Math.abs(input1))%2==0)
+    even_count++;
+    else
+    odd_count++;
+    if((Math.abs(input2))%2==0)
+	even_count++;
+    else
+	odd_count++;
+	if((Math.abs(input3))%2==0)
+	even_count++;
+	else
+	odd_count++;
+	if((Math.abs(input4))%2==0)
+	even_count++;
+	else
+	odd_count++;
+	if((Math.abs(input5))%2==0)
+	even_count++;
+	else
+	odd_count++;
+	if(input6.equals("even"))
+	return even_count;
+	if(input6.equals("odd"))
+	return odd_count;
+
+		//throw new UnsupportedOperationException("countEvensOdds(int input1,int input2,int input3,int input4,int input5,String input6)");
+	}
