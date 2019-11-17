@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+class UserMainCode
+{
+public int EvenDigitSum(int input1)
+{
+int sum=0,reminder;
+  while(input1>0)
+  {
+      reminder=input1%10;
+      if(reminder%2==0)
+      {
+          sum=sum+reminder;
+      }
+      input1=input1/10;
+  }  
+  return sum;
+}
+}

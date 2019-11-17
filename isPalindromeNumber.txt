@@ -1,0 +1,18 @@
+int isPalinNum(int input1)
+{
+	int reminder,reverse=0;
+	int temp=input1;
+	while(input1>0)
+	{
+	  reminder=input1%10;
+	  reverse=reverse*10+reminder;
+	  input1=input1/10;
+	}	
+	if(temp==reverse)
+	{
+		return 2;
+	}
+	else
+	return 1;
+	
+}

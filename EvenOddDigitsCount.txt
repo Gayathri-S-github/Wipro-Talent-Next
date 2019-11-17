@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+class UserMainCode
+{
+public int EvenOddDigitsCount(int input1,String input2)
+{
+int sum=0,reminder;
+if(input2.equals("odd")
+{
+while(input1>0)
+   {
+       reminder=input1%10;
+       if(reminder%2!=0)
+       {
+           sum=sum+reminder;
+       }
+	   input1=input1/10;
+   } 
+   return sum;
+}
+else
+{
+while(input1>0)
+   {
+       reminder=input1%10;
+       if(reminder%2==0)
+       {
+           sum=sum+reminder;
+       }
+	   input1=input1/10;
+   } 
+   return sum;
+}
+}
+}
