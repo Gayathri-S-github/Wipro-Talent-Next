@@ -1,0 +1,56 @@
+Take a string as input and calculates the weight of the string as per rule mentioned below.
+
+For calculating the weight of the string Weight of all alphabetic characters that appear in the string should be added
+
+-Weight of vowels that appear in the string should either be ignored OR added depending upon a specified option
+
+-All non-alphabetic characters in the string should be ignored
+
+- Weight of each letter is its position in the english alphabet system,i.e weight of a=1,weight of b=2,weight of c=3,weight of d=4 and so on...            weight of y=25, weight of z=26
+
+- Weight of upper-case and Lower-Case letters should be taken as the same, i.e weight of A=a=1,weight of B=b=1, weight of C=c=1 and so on..    weight of Z=z=26
+
+- In a strings if all the character are numbers or special characters or its combination then return 0
+
+Note:
+
+Note that weight of vowels is ignored.Also note that the weight of non-alphbetic characters such as space character and ! is taken as zero.
+
+ 
+
+The function will accept two input parameters input1 and input2,
+
+where,
+
+input1represents the string whose weight needs to be calculated
+
+input2 represents the option specifying whether or not the weight of vowels should be included
+
+if input2 is 0,vowels that appear in the string should be ignored
+
+if input2 is 1,weight of vowels that appear in the string should also be added.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.io.*;
+import java.util.*;
+class UserMainCode
+{
+public int weightOfString(String input1,int input2)
+{
+	int sum=0;
+	String s=input1.toUpperCase();
+	int len=input1.length();
+	for(int i=0;i<len;i++)
+	{
+		char letter=s.charAt(i);
+		if(Character.isAlphabetic(letter))
+		{
+			if((input2==0)&&(letter=='A' || letter=='E' || letter=='I' || letter=='O'|| letter=='U'))
+			sum=sum+0;
+			else
+			sum=sum+letter-64;
+		}
+	}
+	return sum;
+}
+}	
