@@ -1,0 +1,11 @@
+import java.io.*;
+import java.util.*;
+
+class allDigitsCount
+{
+public int UserMainCode(int input1)
+{
+int len=Integer.toString(input1).length();
+return len;
+}
+}
